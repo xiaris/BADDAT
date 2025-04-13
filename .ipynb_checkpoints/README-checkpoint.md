@@ -2,6 +2,9 @@
 
 **DependenceFitter** is a lightweight toolkit for forward modeling and statistical inference of AGN variability timescales and their dependence on physical parameters. It is particularly useful for addressing biases in DRW timescale measurements and exploring correlations with properties such as black hole mass, luminosity, and wavelength.
 
+![Demo](demo.png)
+
+
 ## 🔧 Dependencies and Code Attribution
 
 This project makes use of and adapts portions of code from the following open-source libraries:
