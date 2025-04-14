@@ -1,11 +1,16 @@
 # ✨ BADDAT
 
-**BADDAT** (Baseline-Aware Dependence fitting for DAmping Timescales) is a lightweight toolkit for forward modeling and statistical inference of AGN variability timescales and their dependence on physical parameters. It is particularly useful for addressing biases in DRW timescale measurements and exploring correlations with properties such as black hole mass, luminosity, and wavelength.
+Baseline-Aware Dependence fitting for DAmping Timescales (**BADDAT**) is a lightweight toolkit for forward modeling and statistical inference of AGN variability timescales and their dependence on physical parameters. It is particularly useful for addressing biases in DRW timescale measurements and exploring correlations with properties such as black hole mass, luminosity, and wavelength.
+
+```python
+import BADDAT
+flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
+```
 
 ![Demo](demo.png)
 
 
-## 🔧 Dependencies and Code Attribution
+## 🔧 References
 
 This project makes use of and adapts portions of code from the following open-source libraries:
 
@@ -16,10 +21,7 @@ We thank the authors of these libraries for making their work openly available.
 
 ## 🚀 Getting Started
 
-
-```python
-import BADDAT
-flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
-```
-
 See `demo.ipynb` for a toy example demonstrating basic usage.
+
+
+
