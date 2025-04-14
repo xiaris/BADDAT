@@ -17,3 +17,6 @@ We thank the authors of these libraries for making their work openly available.
 ## 🚀 Getting Started
 
 See `demo.ipynb` for a toy example demonstrating basic usage.
+
+```python
+flat_samples = DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
