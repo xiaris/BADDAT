@@ -20,5 +20,6 @@ We thank the authors of these libraries for making their work openly available.
 ```python
 import BADDAT
 flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
+```
 
 See `demo.ipynb` for a toy example demonstrating basic usage.
