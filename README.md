@@ -4,7 +4,6 @@ Baseline-Aware Dependence fitting for DAmping Timescales (**BADDAT**) is a light
 
 ```python
 import BADDAT
-# Note that the input parameters should be numpy array
 flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
 ...
 ```

@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.linear_model import BayesianRidge
 from multiprocessing import Pool
 import emcee
+import pandas
 from scipy.ndimage import gaussian_filter
 import autograd
 import os
@@ -205,7 +206,16 @@ def softplus(x,s_k=1):
 
 def softplus_derivative(x, k_s=1):
     return 1 - 1 / (1 + np.exp(-x / k_s))
-    
+
+def numpy_check(arr):
+    if isinstance(arr, np.ndarray) or isinstance(arr, float):
+        return arr
+    elif isinstance(arr, pandas.Series):
+        return arr.to_numpy()
+    else:
+        raise TypeError(f"must be a numpy array or pandas Series, but got {type(arr)}")
+
+
 class DependenceFitter1:
     """
     A model to fit the dependence of tau on param1, incorporating the effects of 
@@ -227,12 +237,12 @@ class DependenceFitter1:
         Redshift of the sources.
     """
     def __init__(self, tau, baseline, n_cadence, param1, param1_e=0., redshift=0.):
-        self.tau = tau
-        self.baseline = baseline
-        self.n_cadence = n_cadence
-        self.param1 = param1
-        self.param1_e = param1_e
-        self.redshift = redshift
+        self.tau = numpy_check(tau)
+        self.baseline = numpy_check(baseline)
+        self.n_cadence = numpy_check(n_cadence)
+        self.param1 = numpy_check(param1)
+        self.param1_e = numpy_check(param1_e)
+        self.redshift = numpy_check(redshift)
             
     def log_likelihood(self, theta):
         """
@@ -346,14 +356,14 @@ class DependenceFitter2:
         Redshift of the sources.
     """
     def __init__(self, tau, baseline, n_cadence, param1, param2, param1_e=0., param2_e=0., redshift=0.):
-        self.tau = tau
-        self.baseline = baseline
-        self.n_cadence = n_cadence
-        self.param1 = param1
-        self.param1_e = param1_e
-        self.param2 = param2
-        self.param2_e = param2_e        
-        self.redshift = redshift
+        self.tau = numpy_check(tau)
+        self.baseline = numpy_check(baseline)
+        self.n_cadence = numpy_check(n_cadence)
+        self.param1 = numpy_check(param1)
+        self.param1_e = numpy_check(param1_e)
+        self.param2 = numpy_check(param2)
+        self.param2_e = numpy_check(param2_e        )
+        self.redshift = numpy_check(redshift)
     def log_likelihood(self, theta):
         """
         Compute the log-likelihood of the model given the parameters.
