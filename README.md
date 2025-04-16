@@ -4,6 +4,7 @@ Baseline-Aware Dependence fitting for DAmping Timescales (**BADDAT**) is a light
 
 ```python
 import BADDAT
+# Note that the input parameters should be numpy array
 flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit()
 ...
 ```
@@ -17,10 +18,7 @@ See `demo.ipynb` for a toy example demonstrating basic usage.
 
 ## 🔧 References
 
-This project makes use of and adapts portions of code from the following open-source libraries:
-
-- [`taufit`](https://github.com/burke86/taufit) by Colin J. Burke – selected functions for DRW likelihood evaluation and modeling were adapted and modified.
-- [`celerite`](https://github.com/dfm/celerite) by Foreman-Mackey et al. – parts of the Gaussian Process modeling framework were referenced and customized for this toolkit.
+This project makes use of and adapts portions of code from open-source libraries [`taufit`](https://github.com/burke86/taufit) by Colin J. Burke –  parts of the functions for DRW likelihood evaluation and modeling were referenced and customized for this toolkit.
 
 We thank the authors of these libraries for making their work openly available.
 
