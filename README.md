@@ -19,7 +19,7 @@ See `demo.ipynb` for a toy example demonstrating basic usage.
 
 This project makes use of and adapts portions of code from open-source libraries [`taufit`](https://github.com/burke86/taufit) by Colin J. Burke –  parts of the functions for DRW likelihood evaluation and modeling were referenced and customized for this toolkit.
 
-We thank the authors of these libraries for making their work openly available.
+We thank the authors for making their work openly available.
 
 
 
