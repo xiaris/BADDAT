@@ -136,7 +136,6 @@ def _compute_jpm():
         Delta_AIC_hi = params[ind_array, 3]
         tau1 =  params[ind_array, 0][(Delta_AIC_hi>1)&(Delta_AIC_low>1)]
         tau0 =  np.repeat(np.linspace(-3, 9, N1), N2)[ind_array][(Delta_AIC_hi>1)&(Delta_AIC_low>1)]
-    
         X2,Y2,H2=HXY(tau1,tau0)
         JPM.append(H2)
     JPM = np.array(JPM)
