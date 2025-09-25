@@ -12,7 +12,7 @@ flat_samples = BADDAT.DependenceFitter1(tau, baseline, n_cadence, log_M_BH).fit(
 
 ## 🚀 Getting Started
 
-See `demo.ipynb` for a toy example demonstrating basic usage.
+See [demo.ipynb](demo.ipynb) for a toy example demonstrating basic usage.
 
 
 ## 🔧 References
